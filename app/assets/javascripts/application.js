@@ -95,12 +95,9 @@ function byteLength(str) {
 
 // clone, just data, no instances of objects
 function clone(item, full) {
-
   // just return/clone false conditions
   if (!item) { return item }
-
   var itemType = item.constructor.name
-
   // IE behavior // doesn't know item.constructor.name, detect it by underscore
   if (itemType === undefined) {
     if (_.isArray(item)) {
